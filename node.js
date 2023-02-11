@@ -19,7 +19,9 @@ module.exports = {
         singleQuote: true,
         trailingComma: 'all',
         arrowParens: 'always',
+        bracketSpacing: true,
         semi: false,
+        endOfLine: 'auto'
       },
     ],
   },

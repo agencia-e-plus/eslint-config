@@ -1,4 +1,6 @@
-# Rocketseat ESLint config
+# e-Plus Agency ESLint config
+
+ESLint config based on Rocketseat's.
 
 ## Whats included?
 
@@ -11,12 +13,14 @@
 ## Setup
 
 1. Install the dependencies
-```
+
+```sh
 npm i -D eslint @rocketseat/eslint-config
 ```
 
 2. Create a `.eslintrc.json` file extending the config:
-```
+
+```json
 {
   "extends": "@rocketseat/eslint-config/react"
   // "extends": "@rocketseat/eslint-config/node"
