@@ -1,21 +1,6 @@
 module.exports = {
-	env: {
-		es2021: true,
-		node: true
-	},
-	extends: [
-		'standard',
-		'plugin:prettier/recommended',
-		'./rules.js',
-		'./overrides.js'
-	],
-	parser: '@typescript-eslint/parser',
-	parserOptions: {
-		ecmaVersion: 'latest',
-		sourceType: 'module'
-	},
-	plugins: ['@typescript-eslint'],
 	rules: {
+		// Prettier
 		'prettier/prettier': [
 			'error',
 			{
@@ -30,6 +15,7 @@ module.exports = {
 			}
 		],
 
+		// Imports
 		'import/order': [
 			'error',
 			{
@@ -41,11 +27,11 @@ module.exports = {
 					['parent', 'sibling', 'index']
 				]
 			}
-		]
-	},
-	settings: {
-		'import/parsers': {
-			[require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts']
-		}
+		],
+		'import/newline-after-import': 'error',
+
+		// Best practices
+		eqeqeq: ['error', 'always', { null: 'ignore' }],
+		'default-param-last': 'error'
 	}
 }

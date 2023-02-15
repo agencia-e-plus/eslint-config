@@ -8,7 +8,9 @@ module.exports = {
 		'plugin:react/recommended',
 		'plugin:react-hooks/recommended',
 		'standard',
-		'plugin:prettier/recommended'
+		'plugin:prettier/recommended',
+		'./rules.js',
+		'./overrides.js'
 	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
@@ -20,19 +22,7 @@ module.exports = {
 	},
 	plugins: ['react', 'jsx-a11y', '@typescript-eslint'],
 	rules: {
-		'prettier/prettier': [
-			'error',
-			{
-				printWidth: 80,
-				tabWidth: 2,
-				singleQuote: true,
-				trailingComma: 'all',
-				arrowParens: 'always',
-				bracketSpacing: true,
-				semi: false,
-				endOfLine: 'auto'
-			}
-		],
+		
 		'react/react-in-jsx-scope': 'off',
 		'react/prop-types': 'off',
 		'jsx-a11y/alt-text': [
@@ -46,7 +36,20 @@ module.exports = {
 		'jsx-a11y/aria-proptypes': 'warn',
 		'jsx-a11y/aria-unsupported-elements': 'warn',
 		'jsx-a11y/role-has-required-aria-props': 'warn',
-		'jsx-a11y/role-supports-aria-props': 'warn'
+		'jsx-a11y/role-supports-aria-props': 'warn',
+
+    'import/order': [
+      'error',
+      {
+        'newlines-between': 'always',
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          ['parent', 'sibling', 'index'],
+        ],
+      },
+    ],
 	},
 	settings: {
 		react: {
